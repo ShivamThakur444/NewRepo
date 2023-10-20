@@ -1,0 +1,32 @@
+package Newpack;
+import java.util.Scanner;
+public class Cal {
+
+	public static void main(String[] args) {
+		double ans;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the First Number:");
+		double first = sc.nextDouble();
+		System.out.println("Enter the Second Number:");
+		double second = sc.nextDouble();
+		System.out.println("Enter the Operator:");
+		char oper = sc.next().charAt(0);
+		switch(oper) {
+		case '+' : ans = first + second;
+		break;
+		case '-' : ans = first - second;
+		break;
+		case '*' : ans = first * second;
+		break;
+		case '/' : ans = first / second;
+		break;
+		default : System.out.print("Entered operator is inavlid");
+		return;
+		}
+		if(second == 0){
+			System.out.println("Result is 0");
+		}
+		else {
+		System.out.println("Result is " + ans);
+		}
+	}
